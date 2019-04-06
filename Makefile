@@ -91,3 +91,8 @@ chown:
 vnc:
 	open vnc://localhost:5900
 
+save:
+	git add .
+	git commit -m "save"
+	git push origin master
+
