@@ -1,0 +1,74 @@
+# 参考にしたサイト
+# https://qiita.com/kawasin73/items/2253523be18e5afd994f
+# https://qiita.com/togana/items/30b22fc39fe6f7a188ec
+# https://qiita.com/reflet/items/efb624996f8876f8167e
+
+version: '2'
+services:
+  rails: &app_base
+    container_name: rails
+    build:
+      context: ./rails
+      dockerfile: Dockerfile
+    command: bash -c "rm -f /app/tmp/pids/server.pid; bundle exec rails s -p 3000 -b '0.0.0.0'"
+    env_file:
+      - ./.env.dev
+    environment:
+      APP_DATABASE: example
+      APP_DATABASE_USER: app
+      APP_DATABASE_PASSWORD: development
+    volumes:
+      - ./rails:/app
+    volumes_from:
+      - data
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+      - nuxt
+      - selenium
+    tty: true
+    stdin_open: true
+  nuxt:
+    container_name: nuxt
+    build:
+      context: ./nuxt
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env.dev
+    ports:
+      - 4000:4000
+    volumes:
+      - ./nuxt:/nuxt
+    tty: true
+    stdin_open: true
+    command: ash -c "yarn install; yarn run dev"
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: example
+      MYSQL_USER: app
+      MYSQL_PASSWORD: development
+    volumes_from:
+      - data
+    ports:
+      - 3306:3306
+  data:
+    image: busybox
+    volumes:
+      - db:/var/lib/mysql
+      - bundle:/usr/local/bundle
+  selenium:
+    container_name: selenium
+    image: selenium/standalone-chrome-debug:3.9.1-actinium
+    ports:
+      - 4444:4444
+      - 5900:5900
+
+volumes:
+  db:
+    driver: local
+  bundle:
+    driver: local
