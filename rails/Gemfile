@@ -81,3 +81,5 @@ gem 'google_drive'
 
 # search
 gem 'ransack'
+
+gem 'bootsnap', require: false
