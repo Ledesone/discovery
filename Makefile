@@ -1,6 +1,6 @@
 FIG = docker-compose
-RRUN = $(FIG) run --rm conv_rails
-NRUN = $(FIG) run --rm conv_nuxt
+RRUN = $(FIG) run --rm rails
+NRUN = $(FIG) run --rm nuxt
 RAILS = $(RRUN) bin/rails
 
 # コンテナ操作コマンド等
@@ -62,7 +62,7 @@ dbs:
 	@$(RAILS) db:seed
 dbd:
 	@$(RAILS) db:drop
-dbcms:
+dbinit:
 	@$(RAILS) db:create
 	@$(RAILS) db:migrate
 	@$(RAILS) db:seed

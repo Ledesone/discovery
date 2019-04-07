@@ -10,6 +10,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_nuxticons_af000494 from 'nuxt_plugin_nuxticons_af000494' // Source: ./nuxt-icons.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_70e58b01 from 'nuxt_plugin_bootstrapvue_70e58b01' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_03a79ed2 from 'nuxt_plugin_axios_03a79ed2' // Source: ./axios.js (mode: 'all')
+
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
 
@@ -102,7 +106,42 @@ async function createApp(ssrContext) {
     ssrContext
   })
 
+  const inject = function (key, value) {
+    if (!key) throw new Error('inject(key, value) has no key provided')
+    if (typeof value === 'undefined') throw new Error('inject(key, value) has no value provided')
+    key = '$' + key
+    // Add into app
+    app[key] = value
+
+    // Check if plugin not already installed
+    const installKey = '__nuxt_' + key + '_installed__'
+    if (Vue[installKey]) return
+    Vue[installKey] = true
+    // Call Vue.use() to install the plugin into vm
+    Vue.use(() => {
+      if (!Vue.prototype.hasOwnProperty(key)) {
+        Object.defineProperty(Vue.prototype, key, {
+          get() {
+            return this.$root.$options[key]
+          }
+        })
+      }
+    })
+  }
+
   // Plugin execution
+
+  if (typeof nuxt_plugin_nuxticons_af000494 === 'function') {
+    await nuxt_plugin_nuxticons_af000494(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_bootstrapvue_70e58b01 === 'function') {
+    await nuxt_plugin_bootstrapvue_70e58b01(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_03a79ed2 === 'function') {
+    await nuxt_plugin_axios_03a79ed2(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
