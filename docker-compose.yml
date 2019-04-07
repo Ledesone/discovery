@@ -1,8 +1,3 @@
-# 参考にしたサイト
-# https://qiita.com/kawasin73/items/2253523be18e5afd994f
-# https://qiita.com/togana/items/30b22fc39fe6f7a188ec
-# https://qiita.com/reflet/items/efb624996f8876f8167e
-
 version: '2'
 services:
   rails: &app_base
