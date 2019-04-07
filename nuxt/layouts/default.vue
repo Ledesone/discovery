@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-content">
     <div class="container">
       <nuxt />
     </div>
@@ -44,8 +44,16 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-.container {
-  height: 630px;
+.main-content {
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 120px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+.navbar{
+  padding: 30px 0;
+  position: absolute;
+  bottom: 0;
 }
 .nav-icons {
   text-align: center;
