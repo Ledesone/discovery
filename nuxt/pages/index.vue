@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        nuxt
+        Hello,World!
       </h1>
       <h2 class="subtitle">
         My mathematical Nuxt.js project
