@@ -6,5 +6,10 @@ Rails.application.routes.draw do
         get 'sample'
       end
     end
+    resources :analytics, only: [] do
+      collection do
+        get 'mock_report'
+      end
+    end
   end
 end
