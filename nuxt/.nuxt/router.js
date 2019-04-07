@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 const _53e6166e = () => interopDefault(import('../pages/1/index.vue' /* webpackChunkName: "pages/1/index" */))
 const _b10e3d1c = () => interopDefault(import('../pages/5/index.vue' /* webpackChunkName: "pages/5/index" */))
 const _3c5d9433 = () => interopDefault(import('../pages/6/index.vue' /* webpackChunkName: "pages/6/index" */))
+const _6626f9b5 = () => interopDefault(import('../pages/8/index.vue' /* webpackChunkName: "pages/8/index" */))
 const _39b8d4dc = () => interopDefault(import('../pages/nisho/index.vue' /* webpackChunkName: "pages/nisho/index" */))
 const _e04075ba = () => interopDefault(import('../pages/sample/index.vue' /* webpackChunkName: "pages/sample/index" */))
 const _07b72a12 = () => interopDefault(import('../pages/top/index.vue' /* webpackChunkName: "pages/top/index" */))
@@ -97,6 +98,10 @@ export function createRouter() {
       path: "/6",
       component: _3c5d9433,
       name: "6"
+    }, {
+      path: "/8",
+      component: _6626f9b5,
+      name: "8"
     }, {
       path: "/nisho",
       component: _39b8d4dc,
