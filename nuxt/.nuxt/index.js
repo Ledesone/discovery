@@ -10,8 +10,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_nuxticons_af000494 from 'nuxt_plugin_nuxticons_af000494' // Source: ./nuxt-icons.js (mode: 'all')
 import nuxt_plugin_bootstrapvue_70e58b01 from 'nuxt_plugin_bootstrapvue_70e58b01' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_templatesplugin6888f431_40c30cb4 from 'nuxt_plugin_templatesplugin6888f431_40c30cb4' // Source: ./templates.plugin.6888f431.js (mode: 'all')
 import nuxt_plugin_axios_03a79ed2 from 'nuxt_plugin_axios_03a79ed2' // Source: ./axios.js (mode: 'all')
 
 // Component: <NoSsr>
@@ -131,12 +131,12 @@ async function createApp(ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_nuxticons_af000494 === 'function') {
-    await nuxt_plugin_nuxticons_af000494(app.context, inject)
-  }
-
   if (typeof nuxt_plugin_bootstrapvue_70e58b01 === 'function') {
     await nuxt_plugin_bootstrapvue_70e58b01(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_templatesplugin6888f431_40c30cb4 === 'function') {
+    await nuxt_plugin_templatesplugin6888f431_40c30cb4(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_03a79ed2 === 'function') {

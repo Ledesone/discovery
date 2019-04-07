@@ -7,19 +7,19 @@
       <div class="container-fluid">
         <div class="col-md-12 nav-icons">
           <span class="col-auto">
-            <font-awesome-icon icon="home"  style="font-size: 30px"/>
+            <font-awesome-icon icon="home"  style="font-size: 20px"/>
           </span>
           <span class="col-auto">
-            <font-awesome-icon icon="camera-retro"  style="font-size: 30px"/>
+            <font-awesome-icon icon="camera-retro"  style="font-size: 20px"/>
           </span>
           <span class="col-auto">
-            <font-awesome-icon icon="list"  style="font-size: 30px"/>
+            <font-awesome-icon icon="list"  style="font-size: 20px"/>
           </span>
           <span class="col-auto">
-            <font-awesome-icon icon="calendar-alt"  style="font-size: 30px"/> 
+            <font-awesome-icon icon="calendar-alt"  style="font-size: 20px"/>
           </span>
           <span class="col-auto">
-            <font-awesome-icon icon="search"  style="font-size: 30px"/>
+            <font-awesome-icon icon="search"  style="font-size: 20px"/>
           </span>
         </div>
       </div>
