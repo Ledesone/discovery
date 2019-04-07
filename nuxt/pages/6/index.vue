@@ -16,15 +16,11 @@ export default {
     .face{
     width: 50px;
     height: 50px;
-    color: ; 
-    background-color: ;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ;
-    border-radius: ;
     cursor: pointer;
     }
 
-    
+
 </style>
