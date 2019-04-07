@@ -3,7 +3,7 @@
     <div class="container">
       <nuxt />
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
       <div class="container-fluid">
         <div class="col-md-12 nav-icons">
           <span class="col-auto">
@@ -43,17 +43,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
-.main-content {
-  min-height: 100vh;
-  position: relative;/*←相対位置*/
-  padding-bottom: 120px;/*←footerの高さ*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-}
-.navbar{
-  padding: 30px 0;
-  position: absolute;
-  bottom: 0;
 }
 .nav-icons {
   text-align: center;
