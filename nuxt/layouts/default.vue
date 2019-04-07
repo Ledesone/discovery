@@ -4,27 +4,29 @@
       <nuxt />
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-bottom">
-      <div class="container">
-        <div class="col-sm-12">
-          <div class="col-sm-2">
+      <div class="container-fluid">
+        <div class="col-md-12 nav-icons">
+          <span class="col-auto">
             <font-awesome-icon icon="home"  style="font-size: 30px"/>
-          </div>
-          <div class="col-sm-2">
+          </span>
+          <span class="col-auto">
             <font-awesome-icon icon="camera-retro"  style="font-size: 30px"/>
-          </div>
-          <div class="col-sm-2">
+          </span>
+          <span class="col-auto">
             <font-awesome-icon icon="list"  style="font-size: 30px"/>
-          </div>
-          <div>
+          </span>
+          <span class="col-auto">
             <font-awesome-icon icon="calendar-alt"  style="font-size: 30px"/> 
-          </div>
-          <div>
+          </span>
+          <span class="col-auto">
             <font-awesome-icon icon="search"  style="font-size: 30px"/>
-          </div>
+          </span>
         </div>
       </div>
-      <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> discovery</a>
+      <div class="container-fluid">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/"> discovery</a>
+        </div>
       </div>
     </nav>
   </div>
@@ -44,6 +46,12 @@ html {
 }
 .container {
   height: 630px;
+}
+.nav-icons {
+  text-align: center;
+}
+.footer-copyright.py-3 {
+  width: 100%;
 }
 *,
 *:before,
