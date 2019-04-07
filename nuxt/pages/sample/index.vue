@@ -1,9 +1,12 @@
 <template>
   <section class="container">
     <div class="sample">
-      {{ sample }}
-      sampleページ
-      {{ ip }}
+      <p>{{ sample }}</p>
+      <p>sampleページ</p>
+      <p>{{ ip }}</p>
+      <p>report_json: {{ report }}</p>
+      <p>report_arrange: {{ report.arrange }}</p>
+      <p>diary_json: {{ diary }}</p>
     </div>
   </section>
 </template>
@@ -14,7 +17,9 @@ export default {
   data() {
     return {
       ip: '',
-      sample: ''
+      sample: '',
+      report: '',
+      diary: ''
     }
   },
   created() {
@@ -30,6 +35,16 @@ export default {
     this.$axios.get('http://localhost:3000/v1/samples/sample')
     .then((response) => {
       this.sample = response.data;
+    })
+
+    this.$axios.get('http://localhost:3000/v1/analytics/mock_report')
+    .then((response) => {
+      this.report = response.data[0];
+    })
+
+    this.$axios.get('http://localhost:3000/v1/diary/mock_diary')
+    .then((response) => {
+      this.diary = response.data[0];
     })
   },
   methods: {
