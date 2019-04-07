@@ -6,6 +6,7 @@
       <p>{{ ip }}</p>
       <p>report_json: {{ report }}</p>
       <p>report_arrange: {{ report.arrange }}</p>
+      <p>diary_json: {{ diary }}</p>
     </div>
   </section>
 </template>
@@ -17,7 +18,8 @@ export default {
     return {
       ip: '',
       sample: '',
-      report: ''
+      report: '',
+      diary: ''
     }
   },
   created() {
@@ -38,7 +40,11 @@ export default {
     this.$axios.get('http://localhost:3000/v1/analytics/mock_report')
     .then((response) => {
       this.report = response.data[0];
-      console.log(this.report)
+    })
+
+    this.$axios.get('http://localhost:3000/v1/diary/mock_diary')
+    .then((response) => {
+      this.diary = response.data[0];
     })
   },
   methods: {
