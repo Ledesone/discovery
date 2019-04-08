@@ -66,15 +66,18 @@ export default {
   },
   
   fontawesome: {
-    component: 'fa', 
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['fas']
       },
       {
-        set: '@fortawesome/pro-regular-svg-icons',
-        icons: ['faAdjust', 'faArchive']
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['far']
       }
     ]
   }

@@ -4,33 +4,42 @@
       <nuxt />
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
-      <div class="container-fluid">
-        <div class="col-md-12 nav-icons">
-          <span class="col-auto">
-            <font-awesome-icon icon="home"  style="font-size: 20px"/>
-          </span>
-          <span class="col-auto">
-            <font-awesome-icon icon="camera-retro"  style="font-size: 20px"/>
-          </span>
-          <span class="col-auto">
-            <font-awesome-icon icon="list"  style="font-size: 20px"/>
-          </span>
-          <span class="col-auto">
-            <font-awesome-icon icon="calendar-alt"  style="font-size: 20px"/>
-          </span>
-          <span class="col-auto">
-            <font-awesome-icon icon="search"  style="font-size: 20px"/>
-          </span>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <div class="col-md-12 nav-icons">
+        <span class="col-auto">
+          <font-awesome-icon icon="home" class="font-icon" @click="linkToTop"/>
+        </span>
+        <span class="col-auto">
+          <font-awesome-icon icon="camera-retro" class="font-icon" @click="linkToPost"/>
+        </span>
+        <span class="col-auto">
+          <font-awesome-icon icon="list" class="font-icon" @click="linkToPost"/>
+        </span>
+        <span class="col-auto">
+          <font-awesome-icon icon="calendar-alt" class="font-icon" @click="linkToPost"/>
+        </span>
+        <span class="col-auto">
+          <font-awesome-icon icon="search" class="font-icon" @click="linkToPost"/>
+        </span>
+        <div>© 2019 Copyright:
           <a href="https://mdbootstrap.com/education/bootstrap/"> discovery</a>
         </div>
       </div>
     </nav>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    linkToTop (e) {
+      this.$router.push('menu')
+    },
+    linkToPost (e) {
+      this.$router.push('post')
+    }
+  }
+}
+</script>
 
 <style>
 html {
@@ -43,6 +52,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+.font-icon {
+  font-size: 20px
 }
 .nav-icons {
   text-align: center;

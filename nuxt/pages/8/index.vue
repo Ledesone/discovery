@@ -1,7 +1,10 @@
 <template>
 <div>
     <div class="row">
-        <div class="col-sm-12"><h2>傾向と総評</h2><hr/></div>
+        <div class="col-sm-12">
+	     <h2>傾向と総評</h2>
+	     <hr style="margin-top:0;margin-bottom:0;border-bottom:solid 1px;"/>
+	</div>
     </div>
     <div class="row">
         <div class="col-sm-12">{{ diary.diary }}</div>
@@ -12,7 +15,6 @@
         <div class="col-sm-12">{{ sample[0] }}</div>
     </div>
     -->
-    
     <div class="row">
         <div class="col-sm-12">
 	     <div class="kao"><font-awesome-icon icon="smile-beam" style="font-size: 30px"/></div>
@@ -30,7 +32,11 @@
 
 	     <!--	     {{ report }}	  -->
 	</div>
-    <table>
+    </div>
+    
+    <div class="row">
+    	 <div class="col-sm-12">
+	     <table cellspacing="2"  style="border-collapse:separate;">
         <tr><td><div class="tsuyomi">アレンジ</div></td>
             <td><div style="background-color:gray;width:10em;">&nbsp;</div></td>
         </tr>
@@ -49,13 +55,18 @@
         <tr><td><div class="tsuyomi">信念</div></td>
 	    <td><div style="background-color:gray;width:6em;">&nbsp;</div></td>			
         </tr>
-    </table>
-            
+	    </table>
+        </div>        
     </div>
+
+
     <div class="row">
-        <div class="col-sm-12">{{ ip }}</div>
-    </div>
-    </div>
+        <div class="col-sm-12">
+		<div style="height:8em;"></div>
+		<!-- {{ ip }} -->
+	</div>
+    </div> 
+</div>
 </template>
 
 <script>
@@ -104,7 +115,7 @@ export default {
 .sample {
   background-color: #ddd;
 }
-.diary {color:red;}
 .kao {text-align:center; width:15%; display:inline-block;}
-.tsuyomi {text-align:right; width:100%; display:inline-block;}
+.tsuyomi {text-align:right; width:8em; display:inline-block;}
+.row {margin-top:1em;}
 </style>
