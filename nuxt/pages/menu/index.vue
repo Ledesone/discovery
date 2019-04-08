@@ -20,7 +20,7 @@
     <div class="row">
       <div class="container-fluid">
         <div class="diary-head">
-          2019/04/08 niko
+          2019/04/07 niko
         </div>
         <div class="diary-body">
           <div class="diary-message">
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="container-fluid">
         <div class="diary-head">
-          2019/04/08 niko
+          2019/04/06 niko
         </div>
         <div class="diary-body">
           <div class="diary-message">
@@ -54,7 +54,7 @@
     <div class="row">
       <div class="container-fluid">
         <div class="diary-head">
-          2019/04/08 niko
+          2019/04/05 niko
         </div>
         <div class="diary-body">
           <div class="diary-message">
