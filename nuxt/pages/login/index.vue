@@ -12,20 +12,20 @@
           <input type="password" class="form-control" name="password" placeholder="パスワード">
         </div>
         <div class="text-center">
-          <button type="button" class="login-btn btn btn-default">ログイン</button>
+          <button type="button" class="login-btn btn btn-default" @click="linkToTop">ログイン</button>
         </div>
         <div class="text-center">
           <a class="">新規アカウントの作成</a>
         </div>
         <div class="sns-login">
-          <div class="text-center">
-            <button type="button" class="btn btn-default">facebookでログイン</button>
+          <div>
+            <button type="button" class="text-left login-facebook btn btn-default">facebookでログイン</button>
           </div>
-          <div class="text-center">
-            <button type="button" class="btn btn-default">Twitterでログイン</button>
+          <div>
+            <button type="button" class="text-left login-twitter btn btn-default">Twitterでログイン</button>
           </div>
-          <div class="text-center">
-            <button type="button" class="btn btn-default">LINEでログイン</button>
+          <div>
+            <button type="button" class="text-left login-line btn btn-default">LINEでログイン</button>
           </div>
         </div>
       </form>
@@ -34,7 +34,14 @@
 </template>
 
 <script>
-
+import { fab } from '@fortawesome/free-brands-svg-icons'
+export default {
+  methods: {
+    linkToTop (e) {
+      this.$router.push('menu')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -55,8 +62,23 @@ form {
   width: 100px;
   text-align: center;
 }
-.text-center{
-  button {
+.login-btn {
+  width: 100%;
+  border: solid 1px;
+}
+.sns-login {
+  margin-top: 90px;
+  .login-facebook {
+    width: 100%;
+    border: solid 1px;
+    margin-bottom: 10px;
+  }
+  .login-twitter {
+    width: 100%;
+    border: solid 1px;
+    margin-bottom: 10px;
+  }
+  .login-line {
     width: 100%;
     border: solid 1px;
     margin-bottom: 10px;
