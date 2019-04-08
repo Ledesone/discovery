@@ -19,13 +19,22 @@
         </div>
         <div class="sns-login">
           <div>
-            <button type="button" class="text-left login-facebook btn btn-default">facebookでログイン</button>
+            <button type="button" class="text-left login-facebook btn btn-default">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
+              <span>facebookでログイン</span>
+            </button>
           </div>
           <div>
-            <button type="button" class="text-left login-twitter btn btn-default">Twitterでログイン</button>
+            <button type="button" class="text-left login-twitter btn btn-default">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+              <span>Twitterでログイン</span>
+            </button>
           </div>
           <div>
-            <button type="button" class="text-left login-line btn btn-default">LINEでログイン</button>
+            <button type="button" class="text-left login-line btn btn-default">
+              <font-awesome-icon :icon="['fab', 'line']" />
+              <span>LINEでログイン</span>
+            </button>
           </div>
         </div>
       </form>

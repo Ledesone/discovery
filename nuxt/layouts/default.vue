@@ -9,16 +9,16 @@
           <font-awesome-icon icon="home" class="font-icon" @click="linkToTop"/>
         </span>
         <span class="col-auto">
-          <!-- <font-awesome-icon icon="camera-retro" class="font-icon" @click="linkToPost"/> -->
+          <font-awesome-icon icon="camera-retro" class="font-icon" @click="linkToPost"/>
         </span>
         <span class="col-auto">
-          <!-- <font-awesome-icon icon="list" class="font-icon" @click="linkToPost"/> -->
+          <font-awesome-icon icon="list" class="font-icon" @click="linkToPost"/>
         </span>
         <span class="col-auto">
-          <!-- <font-awesome-icon icon="calendar-alt" class="font-icon" @click="linkToPost"/> -->
+          <font-awesome-icon icon="calendar-alt" class="font-icon" @click="linkToPost"/>
         </span>
         <span class="col-auto">
-          <!-- <font-awesome-icon icon="search" class="font-icon" @click="linkToPost"/> -->
+          <font-awesome-icon icon="search" class="font-icon" @click="linkToPost"/>
         </span>
         <div>© 2019 Copyright:
           <a href="https://mdbootstrap.com/education/bootstrap/"> discovery</a>

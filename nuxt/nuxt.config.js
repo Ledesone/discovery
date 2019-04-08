@@ -72,9 +72,13 @@ export default {
         icons: ['fas']
       },
       {
-        set: '@fortawesome/free-regular-svg-icons',
-        icons: ['faAdjust']
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
       },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['far']
+      }
     ]
   }
 }
