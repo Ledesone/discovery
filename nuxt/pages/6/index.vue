@@ -14,12 +14,12 @@ export default {
 
 <style lang="scss" scoped>
     .face{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    	width: 50px;
+    	height: 50px;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	cursor: pointer;
     }
 
 
