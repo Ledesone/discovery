@@ -92,10 +92,6 @@ export function createRouter() {
       component: _3c5d9433,
       name: "6"
     }, {
-      path: "/6",
-      component: _3c5d9433,
-      name: "6"
-    }, {
       path: "/8",
       component: _6626f9b5,
       name: "8"
