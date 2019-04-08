@@ -7,7 +7,7 @@
 	</div>
     </div>
     <div class="row">
-        <div class="col-sm-12">{{ diary.diary }}</div>
+        <div class="col-sm-12">{{ diary }}</div>
     </div>
 
     <!--
@@ -128,7 +128,8 @@ export default {
       ip: '',
       sample: '',
       report: '',
-      diary: ''
+      diary: '',
+      diaryhtml: ''
     }
   },
   created() {
@@ -153,7 +154,8 @@ export default {
 
     this.$axios.get('http://localhost:3000/v1/diary/mock_diary')
     .then((response) => {
-      this.diary = response.data[0];
+      this.diary = response.data[0].diary;
+
     })
   },
   methods: {
@@ -170,6 +172,5 @@ export default {
 .tsuyomi {text-align:right; width:8em; display:inline-block;}
 .row {margin-top:1em;}
 .tsuyomi-title {font-size:1.8em;font-weight:bold;}
-
 </style>
 
