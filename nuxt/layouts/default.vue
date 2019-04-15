@@ -15,7 +15,7 @@
           <font-awesome-icon icon="list" class="font-icon" @click="linkToPost"/>
         </span>
         <span class="col-auto">
-          <font-awesome-icon icon="calendar-alt" class="font-icon" @click="linkToPost"/>
+          <font-awesome-icon icon="calendar-alt" class="font-icon" @click="linkTo8"/>
         </span>
         <span class="col-auto">
           <font-awesome-icon icon="search" class="font-icon" @click="linkToPost"/>
@@ -36,6 +36,9 @@ export default {
     },
     linkToPost (e) {
       this.$router.push('post')
+    },
+    linkTo8 (e) {
+      this.$router.push('8')
     }
   }
 }
